@@ -25,22 +25,6 @@ const (
 	Client        // Client == 1
 )
 
-func GenerateHostURL(urlType int, tenantId string, in ...string) string {
-	return generateURL("host/hosts", urlType, tenantId, in...)
-}
-
-func GenerateFileShareAclURL(urlType int, tenantId string, in ...string) string {
-	return generateURL("file/acls", urlType, tenantId, in...)
-}
-
-func GenerateFileShareURL(urlType int, tenantId string, in ...string) string {
-	return generateURL("file/shares", urlType, tenantId, in...)
-}
-
-func GenerateFileShareSnapshotURL(urlType int, tenantId string, in ...string) string {
-	return generateURL("file/snapshots", urlType, tenantId, in...)
-}
-
 func GenerateDockURL(urlType int, tenantId string, in ...string) string {
 	return generateURL("docks", urlType, tenantId, in...)
 }
@@ -51,31 +35,6 @@ func GeneratePoolURL(urlType int, tenantId string, in ...string) string {
 
 func GenerateProfileURL(urlType int, tenantId string, in ...string) string {
 	return generateURL("profiles", urlType, tenantId, in...)
-}
-
-func GenerateVolumeURL(urlType int, tenantId string, in ...string) string {
-	return generateURL("block/volumes", urlType, tenantId, in...)
-}
-
-// GenerateNewVolumeURL ...
-func GenerateNewVolumeURL(urlType int, tenantId string, in ...string) string {
-	return generateURL("volumes", urlType, tenantId, in...)
-}
-
-func GenerateAttachmentURL(urlType int, tenantId string, in ...string) string {
-	return generateURL("block/attachments", urlType, tenantId, in...)
-}
-
-func GenerateSnapshotURL(urlType int, tenantId string, in ...string) string {
-	return generateURL("block/snapshots", urlType, tenantId, in...)
-}
-
-func GenerateReplicationURL(urlType int, tenantId string, in ...string) string {
-	return generateURL("block/replications", urlType, tenantId, in...)
-}
-
-func GenerateVolumeGroupURL(urlType int, tenantId string, in ...string) string {
-	return generateURL("block/volumeGroups", urlType, tenantId, in...)
 }
 
 func generateURL(resource string, urlType int, tenantId string, in ...string) string {

@@ -41,6 +41,10 @@ osdslet:
 	go build -ldflags '-w -s' -o $(BUILD_DIR)/bin/osdslet github.com/sodafoundation/telemetry/cmd/osdslet
 osdsdock:
 	go build -ldflags '-w -s' -o $(BUILD_DIR)/bin/osdsdok github.com/sodafoundation/telemetry/cmd/osdsdock
+
+clean:
+	rm -rf $(BUILD_DIR) ./cmd/osdsapiserver/osdsapiserver ./cmd/osdslet/osdslet ./cmd/osdsdock/osdsdock
+
 version:
 	@echo ${VERSION}
 
